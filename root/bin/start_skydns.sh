@@ -13,7 +13,7 @@ function wait_proc {
     fi
 }
 
-/usr/bin/skydns -verbose -addr="0.0.0.0:53" -domain="."
+/usr/bin/skydns -verbose -addr="0.0.0.0:53" -domain="DOMAIN" -nameservers="213.73.91.35:53" -machines=MACHINES
 MYPID=$(ps -ef|grep -v grep |grep ${BINARY}|awk '{print $2}')
 
 function stop () {
