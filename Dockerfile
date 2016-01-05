@@ -14,6 +14,5 @@ RUN yum install -y golang git-core && \
     yum remove -y golang git-core 
 
 ADD etc/supervisord.d/skydns.ini /etc/supervisord.d/
-ADD root/bin/start_skydns.sh /root/bin/start_skydns.sh
+ADD opt/qnib/skydns/bin/start.sh /opt/qnib/skydns/bin/start.sh
 
-CMD /bin/supervisord -c /etc/supervisord.conf
